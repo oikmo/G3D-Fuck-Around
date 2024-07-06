@@ -15,10 +15,16 @@ protected:
 
 	Vector3 position;
 
+	CoordinateFrame frame;
+	Vector3 startFocus;
+	Vector3 focusPosition;
+
+	float yaw, pitch;
+
 public:
 
 	virtual void init(App* app);
-	virtual void move(float elapsed_time);
+	virtual void move(Vector3 position, float elapsed_time);
 	virtual GCamera getG3DCamera() {
 		return gcam;
 	}
@@ -27,11 +33,19 @@ public:
 	}
 
 	virtual Vector3 getRotation() {
-		return gcam.getCoordinateFrame().lookVector();
+		return frame.lookVector();
 	}
 	virtual FPCameraController getController() {
 		return controller;
 	}
+
+	CoordinateFrame getFrame() {
+		return frame;
+	}
+
+
+	virtual void pan(Vector3 position, float spdX, float spdY);
+
 };
 
 #endif

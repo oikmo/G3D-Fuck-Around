@@ -12,9 +12,12 @@ protected:
 	float currentSpeed;
 	float moveRate;
 	class CoordinateFrame cFrame;
+	virtual void handleMovement(float elapsed_time);
 public:
 	virtual void init(App* app);
 	virtual void move(float elapsed_time);
+
+	
 
 	virtual Camera getCamera() { return camera; }
 };
