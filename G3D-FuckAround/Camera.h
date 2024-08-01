@@ -27,7 +27,7 @@ public:
 	virtual void move(Vector3 position, float elapsed_time);
 	virtual GCamera getG3DCamera() {
 		return gcam;
-	}
+	}	
 	virtual Vector3 getPosition() {
 		return gcam.getCoordinateFrame().translation;
 	}

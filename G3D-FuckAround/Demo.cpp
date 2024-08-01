@@ -4,14 +4,13 @@
 #include "Player.h"
 #include "Entity.h"
 
-Array<struct Entity> entityList;
-
 BoxEntity ent(Vector3(0, 0, 0), Vector3(10, 1, 10));
+
+Array<class BoxEntity> arr{};
 
 void Demo::init() {
     app->player.init(app);
-    entityList.append(ent);
-
+    arr.append(ent);
 }
 
 void Demo::cleanup() {
@@ -51,8 +50,10 @@ void Demo::doGraphics() {
     app->renderDevice->setAmbientLightColor(lighting.ambient);
 
     Draw::axes(CoordinateFrame(Vector3(0, 0, 0)), app->renderDevice);
-    //Draw::box(Box(Vector3(0,0,0),Vector3(15,0.5,15)), app->renderDevice, Color4(1,1,1,1));
-    ent.render(app->renderDevice);
+    
+    for (int i = 0; i < arr.size(); i++) {
+        arr[0].render(app->renderDevice);
+    }
 
     app->renderDevice->disableLighting();
 

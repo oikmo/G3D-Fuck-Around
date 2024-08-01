@@ -26,7 +26,7 @@ void Player::move(float elapsed_time) {
 	
 	moveRate = lerp(moveRate, currentSpeed*5, elapsed_time);
 	
-	std::cout << (moveRate * elapsed_time) << std::endl;
+	//std::cout << (moveRate * elapsed_time) << std::endl;
 	handleMovement(elapsed_time);
 	camera.move(position, elapsed_time);
 	

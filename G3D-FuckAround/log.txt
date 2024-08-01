@@ -1,5 +1,5 @@
 Application Log
-Start: Sat Jul  6 23:25:37 2024
+Start: Thu Jul 11 12:46:43 2024
 
 _____________________________________________________
 
@@ -56,7 +56,7 @@ _____________________________________________________
 Starting WinSock networking.
 
 Network:
-  localhost = WINDOWS-7 (26.74.165.214)
+  localhost = WINDOWS-7 (192.168.0.123)
   WinSock 2.0
   Status: Running
   Loaded winsock specification version 2 (514 is the highest available)
